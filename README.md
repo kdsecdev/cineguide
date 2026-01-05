@@ -6,7 +6,7 @@
 
 Discover movies • Find where to watch • Explore cinema release dates
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://github.com/yourusername/cineguide)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://github.com/kdsecdev/cineguide)
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -18,7 +18,7 @@ Discover movies • Find where to watch • Explore cinema release dates
 
 **CineGuide** is a modern, Netflix-inspired movie information platform that helps you discover films, find where to watch them, and explore detailed movie data. With a sleek dark interface and intuitive design, CineGuide makes movie discovery effortless and enjoyable.
 
-![CineGuide Homepage](https://github.com/yourusername/cineguide/blob/main/screenshots/homepage.png)
+![CineGuide Homepage](https://github.com/kdsecdev/cineguide/blob/main/screenshots/homepage.png)
 
 ---
 
@@ -63,11 +63,11 @@ Smart badges show:
 ## 📸 Screenshots
 
 ### Movie Details Modal
-![Movie Details](https://github.com/yourusername/cineguide/blob/main/screenshots/movie-details.png)
+![Movie Details](https://github.com/kdsecdev/cineguide/blob/main/screenshots/movie-details.png)
 *Detailed movie information with streaming availability*
 
 ### Search Results
-![Search Results](https://github.com/yourusername/cineguide/blob/main/screenshots/search-results.png)
+![Search Results](https://github.com/kdsecdev/cineguide/blob/main/screenshots/search-results.png)
 *Fast, responsive search functionality*
 
 ---
@@ -82,7 +82,7 @@ Smart badges show:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/cineguide.git
+git clone https://github.com/kdsecdev/cineguide.git
 
 # Navigate to project directory
 cd cineguide
@@ -206,7 +206,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@yourusername](https://github.com/kdsecdev)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 
 ---
@@ -226,6 +226,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Made with ❤️ and React
 
-[Report Bug](https://github.com/yourusername/cineguide/issues) • [Request Feature](https://github.com/yourusername/cineguide/issues)
+[Report Bug](https://github.com/kdsecdev/cineguide/issues) • [Request Feature](https://github.com/kdsecdev/cineguide/issues)
 
 </div>
