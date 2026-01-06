@@ -14,11 +14,17 @@ const App = () => {
   const [scrolled, setScrolled] = useState(false);
   const [searchExpanded, setSearchExpanded] = useState(false);
   const [hideNav, setHideNav] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const categories = ["All", "Action", "Comedy", "Drama", "Sci-Fi", "Horror", "Romance", "Animated"];
 
   // Load initial movies on mount
   useEffect(() => {
-    searchMovies("Avengers");
+    // Randomize initial content to make it less boring
+    const initialQueries = ["Avengers", "Star Wars", "Harry Potter", "Spider-Man", "Batman"];
+    const randomQuery = initialQueries[Math.floor(Math.random() * initialQueries.length)];
+    searchMovies(randomQuery);
   }, []);
 
   // Handle scroll behavior for navbar
@@ -60,6 +66,18 @@ const App = () => {
       setMovies([]);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    if (category === "All") {
+      // Randomize again for "All"
+      const initialQueries = ["Avengers", "Star Wars", "Harry Potter", "Spider-Man", "Batman"];
+      const randomQuery = initialQueries[Math.floor(Math.random() * initialQueries.length)];
+      searchMovies(randomQuery);
+    } else {
+      searchMovies(category);
     }
   };
 
@@ -132,8 +150,22 @@ const App = () => {
         ) : movies?.length > 0 ? (
           <>
             <h2 className="section-title">
-              {searchTerm ? `Results for "${searchTerm}"` : "Popular Movies"}
+              {searchTerm ? `Results for "${searchTerm}"` : `${selectedCategory} Movies`}
             </h2>
+            
+            {/* Category Filter */}
+            <div className="category-filter">
+              {categories.map((category) => (
+                <button 
+                  key={category} 
+                  className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+                  onClick={() => handleCategoryClick(category)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
             <div className="movie-grid">
               {movies.map((movie) => (
                 <MovieCard 
