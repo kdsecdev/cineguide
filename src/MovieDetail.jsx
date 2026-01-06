@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_URL = `https://www.omdbapi.com?apikey=${process.env.REACT_APP_OMDB_API_KEY}`;
+const API_URL = "https://www.omdbapi.com?apikey=9405a0c2";
 
 const MovieDetail = ({ movie, onClose }) => {
   const [details, setDetails] = useState(null);
@@ -108,7 +108,12 @@ const MovieDetail = ({ movie, onClose }) => {
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content">
-        <button className="modal-close" onClick={onClose}>×</button>
+        <button className="modal-close" onClick={onClose}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="close-text">Back</span>
+        </button>
         
         <div className="modal-backdrop">
           <img 
